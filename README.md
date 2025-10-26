@@ -1,6 +1,31 @@
-### Dragon (C 콘솔 RPG)
+# Dragon (C 콘솔 RPG)
 
 콘솔에서 플레이하는 성장형 RPG입니다. 방향키로 이동하고, 기본 공격/변신 스킬, 퀘스트, 상점, 카지노 등을 통해 진행합니다. ASCII/이모지 기반 렌더링과 터미널 원시 입력(raw mode)로 실시간 조작을 지원합니다.
+
+---
+
+## 개발 기간
+- 2025.06.23(월) ~ 2025.06.28(토) [6일]
+
+---
+
+## 기술 스택
+- Ubuntu, C, VS Code
+
+---
+
+## 담당
+- 팀장 / 맵 · 스킬 구현, 문서 및 요구사항 명세 작성
+
+---
+
+## 데모
+- 이미지
+
+  <img width="1107" height="998" alt="Dragon" src="https://github.com/user-attachments/assets/92c04a70-eada-4f3a-9eda-ebca92cafcc5" />
+
+- 영상
+  https://www.youtube.com/watch?si=_0BpiWPBDG64fwaG&v=II7Y5aEUOlc&feature=youtu.be
 
 ---
 
@@ -9,13 +34,17 @@
 - Compiler: gcc (C11)
 - 터미널: UTF-8, 이모지 표시 가능한 폰트 권장
 
+---
+
 ## 빌드/실행
-```bash
-gcc -O2 -std=c11 dragon.c -o dragon
-./dragon
-```
+    ```bash
+    gcc -O2 -std=c11 dragon.c -o dragon
+    ./dragon
+    ``` 
 - 화살표 키가 동작하지 않으면 기본 터미널을 사용하거나 WSL/Ubuntu 터미널에서 실행하세요.
 - 이모지가 깨지면 터미널 인코딩을 UTF-8로 설정하고 이모지 지원 폰트를 사용하세요.
+
+---
 
 ## 조작 키
 - 이동: 방향키(←↑→↓)
@@ -26,11 +55,15 @@ gcc -O2 -std=c11 dragon.c -o dragon
 - 대화/선택: Y/N, Enter (스토리 다음 장면)
 - 종료: Q
 
+---
+
 ## 맵 심볼(전설)
 - 🟢 던전1, 🔵 던전2, 🔴 던전3, 🚪 히든 던전, ⚫ 최종 던전(보스), 🌀 마을 귀환
 - 🏥 물약상점, 🕌 카지노, 🤖 NPC, 🌴 벽, 🟫 상자
 - 플레이어: 🐍 / 변신 후: 🐉
 - 발사체: 🔥(플레이어), 💧(몬스터)
+
+---
 
 ## 주요 기능
 - 실시간 입력/이동/충돌 처리, 맵 전환(마을 ↔ 던전1~5, 히든)
@@ -40,6 +73,8 @@ gcc -O2 -std=c11 dragon.c -o dragon
 - 상점(포션 구매/회복), 카지노(슬롯머신 베팅/보상/패널티)
 - 인벤토리/골드/HP 관리, 사망 시 마을 복귀/리셋
 - 스토리/엔딩: ASCII 아트 + 텍스트 재생
+
+---
 
 ## 게임 흐름 요약
 1) 오프닝 스토리 → 마을 진입
